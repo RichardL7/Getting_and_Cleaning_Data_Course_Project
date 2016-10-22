@@ -16,9 +16,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Assignment
 
 The objective is to prepare tidy data that can be used for analysis.  The project contains the following files:
-README.md: description of the repo with the scripts
-CodeBook.md: description of the variables, the data, and any transformations to clean up the data
-Run_analysis.R: R scripts performing the anaylsis on the data set
+* README.md: description of the repo with the scripts
+* CodeBook.md: description of the variables, the data, and any transformations to clean up the data
+* Run_analysis.R: R scripts performing the anaylsis on the data set
 
 In run the analysis called "run_analysis.R" for "Human Activity Recogition Using Smartphones", the R script file does the following:
 
