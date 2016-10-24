@@ -5,12 +5,12 @@ The original "Human Activity Recognition Using Smartphones Dataset" was used as 
 The original dataset description:
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activites:
 
-* 1. WALKING
-* 2. WALKING_UPSTAIRS
-* 3. WALKING_DOWNSTAIRS
-* 4. SITTING
-* 5. STANDING
-* 6. LAYING
+* 1 WALKING
+* 2 WALKING_UPSTAIRS
+* 3 WALKING_DOWNSTAIRS
+* 4 SITTING
+* 5 STANDING
+* 6 LAYING
 
 Wearing a smartphone Samsung Galaxy S II on the waist. Using its embedded accelerometer and gyroscope.
 
