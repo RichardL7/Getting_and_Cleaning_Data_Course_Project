@@ -19,6 +19,7 @@ The objective is to prepare tidy data that can be used for analysis.  The projec
 * README.md: description of the repo with the scripts
 * CodeBook.md: description of the variables, the data, and any transformations to clean up the data
 * Run_analysis.R: R scripts performing the anaylsis on the data set
+* tidy data: Output of the tidy data set from run analysis scripts 
 
 In run the analysis called "run_analysis.R" for "Human Activity Recogition Using Smartphones", the R script file does the following:
 
