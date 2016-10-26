@@ -90,6 +90,6 @@ activity_Names <- merge(setMeanStd, activityLabels,
 All_Data <- rbind(mrg_train, mrg_test)
 
 ## 5. From the data set in step 4, independent tidy data set with average of each variable for each activity and each subject
-tidy_Data <- aggregate(. ~subjectId + activityId, activity_Names, mean)
-tidy_Data <- tidy_Data[order(tidy_Data$subjectId, tidy_Data$activityId),]
+tidy_Data <- aggregate(. ~activityType + subjectId + activityId, activity_Names, mean)
+tidy_Data <- tidy_Data[order(tidy_Data$activityType, tidy_Data$subjectId, tidy_Data$activityId),]
 write.table(tidy_Data,"tidy_Data.txt", row.name=FALSE)
