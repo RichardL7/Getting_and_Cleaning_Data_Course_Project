@@ -34,7 +34,7 @@ colNames(activityLabels) <- c("activityId","activityType")
 
 ## 1. Merge the train and test data set to one set:
 mrg_train <- cbind(x_train, y_train, subject_train)
-mrg_test <- cbind(x_test, y_test, subject_test)## Downloading and unzippling data set
+mrg_test <- cbind(x_test, y_test, subject_test)
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/Dataset.zip")
@@ -68,7 +68,6 @@ colNames(subject_test) <- "subjectId"
 
 colNames(activityLabels) <- c("activityId","activityType")
 
-## 1. Merge the train and test data set to one set:
 mrg_train <- cbind(x_train, y_train, subject_train)
 mrg_test <- cbind(x_test, y_test, subject_test)
 All_Data <- rbind(mrg_train, mrg_test)
@@ -89,22 +88,6 @@ activity_Names <- merge(setMeanStd, activityLabels,
                               by = "activityId",
                               all.x=TRUE)
 All_Data <- rbind(mrg_train, mrg_test)
-
-## 2. Extracts only the measurements on the mean and standard deviation for each measurement
-col_Names <- colNames(All_Data)
-
-## 3. Uses descriptive activity names to name the activities in the data set  
-MeanStd <- (grepl("activityId",col_Names) |
-            grepl("subjectId",col_Names) |
-            grepl("mean..",col_Names) |
-            grepl("std..",col_Names)
-            )
-setMeanStd <- All_Data[ ,MeanStd == TRUE]
-
-## 4. Appropriately label the data set with descriptive varaiable  
-activity_Names <- merge(setMeanStd, activityLabels,
-                              by = "activityId",
-                              all.x=TRUE)
 
 ## 5. From the data set in step 4, independent tidy data set with average of each variable for each activity and each subject
 tidy_Data <- aggregate(. ~subjectId + activityId, activity_Names, mean)
